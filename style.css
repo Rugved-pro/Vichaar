@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+Body{
+    background-color: rgba(244, 163, 106, 1);
+}
+.navbar {
+  background-color: rgba(246, 115, 0, 1);
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a{
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+    margin-left: 40px;
+}
+#logo{
+    text-decoration: none;
+    color:white;
+    font-size:3.5em;
+}
+#title{
+    color:black;
+    text-align: center;
+    font-size: 3em;
+    
+}
+.Content{
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.Editor{
+    margin-top: 20px;
+    background-color:rgba(255, 204, 153, 1);
+    border-radius: 2%;
+    width:100%;
+    height:900px;
+    padding: 20px;
+    font-size: 1.5em;
+    border:none;
+    resize: none;
+    outline: none;
+}
+.Editor::placeholder{
+    font-style: italic;
+    color: rgb(161, 132, 103);
+
+
+}
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 500;
+  stroke: white;
+  font-size: large;
+  font-style:normal;
+}
+.Language{
+  text-align: left;
+  font-size: 1.2em;
+  margin-top: 50px;
+  margin-left: 50px;
+   font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+#English{
+  width:30px;
+  height: auto;
+  align-items:left;
+}
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ysabeau-office-font {
+  font-family: "Ysabeau Office", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.word-count {
+  text-align: right;
+  font-style: italic;
+  margin:20px;
+  color: #4a2c1a;
+}
+
