@@ -32,32 +32,7 @@ Body{
     font-size: 3em;
     
 }
-/* .Content{
-    text-align: center;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-} */
-/* .Editor{
-    margin-top: 20px;
-    background-color:rgba(255, 204, 153, 1);
-    border-radius: 2%;
-    width:100%;
-    min-height:600px;
-    height:auto;
-    padding: 20px;
-    font-size: 1.5em;
-    border:none;
-    resize:vertical;
-    outline: none;
-    overflow: hidden;
-} */
-/* .Editor::placeholder{
-    font-style: italic;
-    color: rgb(161, 132, 103);
 
-
-} */
 .quintessential-regular {
   font-family: "Quintessential", serif;
   font-weight: 500;
@@ -75,11 +50,6 @@ Body{
   font-weight: 400px;
   font-style: italic;
 }
-#English{
-  width:30px;
-  height: auto;
-  align-items:left;
-}
 .inter-font {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -94,20 +64,79 @@ Body{
   font-style: normal;
 }
 .word-count {
-  text-align: right;
-  font-style: italic;
-  margin:20px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.9em;
   color: #4a2c1a;
+  font-style: italic;
+  opacity: 0.8;
+  pointer-events: none;
 }
- #quill-editor {
-  height: 250px;
-  background-color: #fef6e4;
-  font-family: 'Ysabeau Office', serif;
-  border-radius: 10px;
-  background-color:rgba(255, 204, 153, 1);
-  text-align: center;
+
+ /* Editor Container (your wrapper) */
+.editor-container {
+  margin: 50px auto;
   max-width: 800px;
-  margin: 40px auto;
+  min-height: 600px;
+  background-color: rgba(255, 204, 153, 1);
+  position:relative;
+  border-radius: 10px;
   padding: 20px;
-} 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#editor-wrapper{
+  border: none;
+}
+/* Quill's container (auto-generated) */
+.ql-container {
+  height: auto !important;
+  scrollbar-width: none;
+  transition: height 0.2s ease;
+  background-color: rgba(255, 204, 153, 1);
+  overflow: hidden !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.ql-container::webkit::-webkit-scrollbar{
+  display: none;
+}
+/* Quill's editable area */
+.ql-editor {
+  font-family: 'Ysabeau Office', serif;
+  font-size: 2em;
+  padding: 10px;
+  background-color: transparent;
+  overflow: visible!important;
+
+}
+#editor{
+  margin: auto;
+}
+#language-flag{
+  width:30px;
+  height: auto;
+  align-items:left;
+  cursor: pointer;
+}
+#language-select{
+  background-color: transparent;
+  border: none;
+  font-family:"Inter", sans-serif; 
+  font-size:1.05em;
+  font-weight: 400px;
+  font-style: italic;
+}
+.ql-editor.ql-blank::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: rgb(161, 132, 103);
+  font-style: italic;
+  pointer-events: none;
+  padding-left: 15px;
+  opacity: 1;
+  font-size: 1.2em;
+}
 
