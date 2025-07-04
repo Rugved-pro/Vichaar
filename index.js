@@ -6,8 +6,8 @@
 const quill = new Quill('#editor', {
   theme: 'snow',
   placeholder: 'Let your thoughts flow' ,
-  modules: {
-    toolbar:false
+   modules: {
+    toolbar: '#custom-toolbar'
   }
 });
 const editorContent = document.querySelector('.ql-editor');
@@ -21,6 +21,7 @@ quill.on('text-change', () => {
     editorContainer.style.height = scrollHeight + 'px';
   }, 0);
 });
+// Language Selector
 const editable = document.querySelector('.ql-editor');
 const langLabel=document.querySelector(`#language-label`);
 const flagImg=document.querySelector(`#language-flag`);
