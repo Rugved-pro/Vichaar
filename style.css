@@ -26,6 +26,7 @@ h1{
   color: white;
   font-size: 3em;
   text-align: center;
+
   font-family: "Inter", sans-serif;
 }
 #logo{
@@ -168,3 +169,55 @@ h1{
   background-color: #fcd9b8;
 }
 
+/* SAVE POEM */
+#poem-actions{
+  display: flex;
+  justify-content: center;
+  margin:0 auto;
+  gap:10px;
+}
+#save-poem{
+font-size: 1.5em;
+border-radius: 10%;
+border:none;
+background-color:#fcd9b8;
+padding: 15px;
+ color: rgb(56, 46, 36);
+ cursor: pointer;
+}
+#clear-poem{
+  font-size: 1.5em;
+  border-radius: 10%;
+  border:none;
+  background-color:#fcd9b8;
+  padding: 10px;
+  color: rgb(56, 46, 36);
+  cursor: pointer;
+}
+#save-poem:hover{
+  background-color:#f5c699;
+}
+#save-poem:active{
+  background-color:#fabb7f;
+}
+#clear-poem:hover{
+  background-color:#f5c699;
+}
+#clear-poem:active{
+  background-color:#fabb7f;
+}
+#Load-btn{
+  font-size: 1.5em;
+  border-radius: 10%;
+  border:none;
+  background-color:#fcd9b8;
+  padding: 10px;
+  color: rgb(56, 46, 36);
+  cursor: pointer;
+}
+#Load-btn:hover{
+  background-color:#f5c699;
+}
+#Load-btn:active{
+  background-color:#fabb7f;
+}

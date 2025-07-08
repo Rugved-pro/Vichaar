@@ -67,3 +67,39 @@ quill.on('text-change', () => {
   const words = text === '' ? 0 : text.split(/\s+/).length;
   count.textContent = `Word count: ${words}`;
 });
+
+//Saving to local
+const saveBtn=document.getElementById(`save-poem`);
+const clearBtn=document.getElementById(`clear-poem`);
+const loadBtn=document.getElementById(`load-poem`);
+saveBtn.addEventListener('click', () => {
+  const text = quill.getText();
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'poem.txt';
+  a.click();
+
+  URL.revokeObjectURL(url);
+});
+
+
+// Load poem from localStorage on page load
+loadBtn.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const text = e.target.result;
+    quill.setText(text); // Or use quill.clipboard.dangerouslyPasteHTML(text) if styled
+  };
+  reader.readAsText(file);
+});
+
+//  Clear poem 
+clearBtn.addEventListener('click', () => {
+  quill.setText('');
+});
