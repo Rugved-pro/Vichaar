@@ -72,6 +72,7 @@ quill.on('text-change', () => {
 const saveBtn=document.getElementById(`save-poem`);
 const clearBtn=document.getElementById(`clear-poem`);
 const loadBtn=document.getElementById(`load-poem`);
+const title=document.getElementById(`poem-title`);
 saveBtn.addEventListener('click', () => {
   const text = quill.getText();
   const blob = new Blob([text], { type: 'text/plain' });
@@ -79,7 +80,7 @@ saveBtn.addEventListener('click', () => {
 
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'poem.txt';
+  a.download = `${title.value || 'Untitled'}.txt`;
   a.click();
 
   URL.revokeObjectURL(url);

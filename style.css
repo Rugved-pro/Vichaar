@@ -221,3 +221,20 @@ padding: 15px;
 #Load-btn:active{
   background-color:#fabb7f;
 }
+.poem-title-container {
+  text-align: center;
+  margin: 20px auto;
+  font-family: "Ysabeau Office", sans-serif;
+  font-size: 1.5em;
+  color: #4a2c1a;
+}
+
+#poem-title {
+  padding: 10px;
+  font-size: 1em;
+  width: 60%;
+  border-radius: 8px;
+  border:none;
+  background-color: transparent;
+  font-family: "Ysabeau Office", sans-serif;
+}
